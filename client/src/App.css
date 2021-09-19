@@ -4,7 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin:0;
   padding:0;
-  background-color: #000266;
+
 }
 
 * {
@@ -19,24 +19,20 @@ a {
   text-decoration: none;
 }
 
-main {
-  width: 100%;
-  height: 768px;
-  position:relative;
 
-}
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 5px 10px 30px rgba(0, 0,0, 4);
+  box-shadow: 5px 10px 30px rgba(0, 0,0, 2);
   position:fixed;
   left:0;
   top:0;
   width: 100%;
-  z-index: 1;
+  z-index:1; /*Add this*/
   background-color: #ffff;
+  border: 2px solid salmon;
 }
 
 nav ul {
@@ -49,7 +45,7 @@ nav ul li a {
   margin:3px;
   padding: 0px 22px;
   display: flex;
-  font-size: 0.8rem;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 500;
   color: #242424;
@@ -59,69 +55,159 @@ nav ul li a {
 
 nav li a:hover {
   text-decoration: underline;
-
   color: #000266;
 }
 
 .pic {
   background-image: url('./images/Mel_pic.jpeg');
-  height: 10%;
-  width: 10%;
+  height: 6%;
+  width: 6%;
   border-radius: 100px;
+  margin:10px;
+  border:2px solid crimson;
 
 }
 
-/* Header */
-.intro {
-  background-color: white;
+
+.about-container {
+  display:flex;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 80px;
+  /* position:relative; */
+  border: 2px solid green;
+}
+
+.wrapper {
+margin: 100px 200px;
+}
+
+span {
+  font-size: 25px;
+  color:crimson;
+}
+
+
+/* Education */
+
+.education-container {
+  display:flex;
+ 
+  width: 100%;
+  
+  /* position:relative; */
+  padding-top: 80px;
+  border: 2px solid hotpink;
+}
+
+
+
+.education-section {
   display: flex;
-  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin-left: 30px;
+
+
 }
 
-.left {
-  flex: 0.5;
-  overflow: hidden;
+.education-title {
+  text-align: center;
 }
 
-  .imgContainer {
-    width: 700px;
-    height: 700px;
-    /* background-color: crimson; */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
+.timeline {
+  width: 80%;
+  position: relative;
+
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color:
+  #545454;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color:black;
+}
+
+
+/*Media Queries for timeline*/
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: #a7216e;
   }
-
-  .second-pic {
-    height: 40%;
-    border-radius: 10px;
-   
-  } 
-
-  .right {
-    flex: 0.5;
+  .timeline ul li {
+    width: 50%;
     position: relative;
+    margin-bottom: 50px;
   }
-    .wrapper {
-      margin-top: 10px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-
-      h1 {
-        font-size: 50px;
-        margin: 10px 0;
-      }
-
-      h3 {
-        font-size: 30px;
-      }
-
-      span {
-        font-size: 25px;
-        color:crimson;
-      }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #a7216e;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: aqua;
+  }
+}

@@ -2,8 +2,8 @@ import React from 'react'
 
 function Portfolio() {
   return (
-    <div>
-      
+    <div className="portfolio-container" id="portfolio">
+    <h1>Portfolio</h1>
     </div>
   )
 }
