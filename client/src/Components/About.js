@@ -17,7 +17,7 @@ function About() {
       showCursor: true,
       backDelay: 1500,
       backSpeed:60,
-      strings: ["Fullstack Developer", "Experienced with SQL, React, Node.js, & Javascript"]
+      strings: ["Fullstack Developer", "Experienced with PostgresSQL, React, Node.js, & Javascript"]
     });
   }, []);
 

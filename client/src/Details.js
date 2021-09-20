@@ -95,14 +95,14 @@ export const projectJavascript = [
 
   {
     id: 1,
-    name: 'Stock Exhange in Javascript',
+    name: 'Stock Exhange',
     image:  `${Stock}`,
     atag:'https://github.com/MelTermin/stockexchange-js',
     category:"javascript"
   },
   {
     id: 2,
-    name: 'Coloring Game in Javascript',
+    name: 'Coloring Game',
     image: `${Coloring}`,
     atag:'https://relaxed-bose-802727.netlify.app/',
     category:"javascript"
@@ -110,7 +110,7 @@ export const projectJavascript = [
 
   {
     id: 3,
-    name: 'Todo-List in Javascript',
+    name: 'Todo-List ',
     image: `${TodoJs}`,
     atag:'https://youthful-yonath-910d43.netlify.app/',
     category:"javascript"
@@ -118,7 +118,7 @@ export const projectJavascript = [
 
   {
     id: 4,
-    name: 'Music PlayList in Javascript',
+    name: 'Music PlayList',
     image:  `${Music}`,
     atag:'https://suspicious-shirley-294fbe.netlify.app/',
     category:"javascript"
