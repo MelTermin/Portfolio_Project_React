@@ -1,4 +1,4 @@
-const projectDetails = [
+const projectReact = [
   {
     id: 1,
     name: 'Todo list in React',
@@ -12,16 +12,20 @@ const projectDetails = [
     image: './Pictures/Twitter-blog.png',
     atag:'https://twitter-blog-react.herokuapp.com/',
     category:"react",
-  },
+  }
+]
+
+const projectJavascript = [
+
   {
-    id: 3,
+    id: 1,
     name: 'Stock Exhange in Javascript',
     image: './Pictures/StockExchangejs.png',
     atag:'https://github.com/MelTermin/stockexchange-js',
     category:"javascript"
   },
   {
-    id: 4,
+    id: 2,
     name: 'Coloring Game in Javascript',
     image: './Pictures/Coloring-game.png',
     atag:'https://relaxed-bose-802727.netlify.app/',
@@ -29,7 +33,7 @@ const projectDetails = [
   },
 
   {
-    id: 5,
+    id: 3,
     name: 'Todo-List in Javascript',
     image: './Pictures/Todo-Javascript.png',
     atag:'https://youthful-yonath-910d43.netlify.app/',
@@ -37,7 +41,7 @@ const projectDetails = [
   },
 
   {
-    id: 6,
+    id: 4,
     name: 'Music PlayList in Javascript',
     image: './Pictures/Playlist.png',
     atag:'https://suspicious-shirley-294fbe.netlify.app/',

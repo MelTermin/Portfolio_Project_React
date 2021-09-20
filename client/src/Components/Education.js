@@ -7,7 +7,7 @@ function Education() {
    
      <div >
      
-     <h2 className="education-title">Education</h2>
+     <h1 className="education-title">Education</h1>
   
      <div class="education-section">
          <div class="timeline">
