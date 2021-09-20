@@ -1,47 +1,76 @@
-import React from 'react'
-import Todo from '../images/Todo-react.png'
+import React, {useState, useEffect} from 'react'
+import Todo from '../images/Book.png'
+import PortfolioList from './PortfolioList'
+import {projectReact,projectJavascript,projectNode} from '../Details'
 
 function Portfolio() {
+
+  const [selected,setSelected]=useState("react")
+  const [data, setData] = useState([]);
+  
+  const list = [
+    {
+      id: "react",
+      title: "React",
+    },
+    {
+      id: "javascript",
+      title: "Javascript",
+    },
+    {
+      id: "node",
+      title: "Node",
+    }
+  ]
+
+  useEffect(() => {
+
+    switch (selected) {
+      case "react":
+        setData(projectReact);
+        break;
+      case "javascript":
+        setData(projectJavascript);
+        break;
+      case "node":
+        setData(projectNode);
+        break;
+      
+      default:
+        setData(projectReact);
+      }
+  }, [selected]);
+
   return (
     <div className="portfolio-container" id="portfolio">
     <h1 className="portfolio-title">Portfolio</h1>
     <ul className="portfolio-ul">
-      <li className="active">Javascript</li>
-      <li>React</li>
-      <li>Node.js</li>
+     {
+       list.map((item)=> {
+         return( <PortfolioList title={item.title} id= {item.id} active= {selected===item.id}
+         setSelected= {setSelected}
+         />)
+       
+       })
+     }
     </ul>
-    <div className="container-portfolio">
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
+    <div className="details-container" >
 
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
+      {data.map((item)=>{
+        return (
+          <div className="item"  >
+          <img className="portfolio-image" src= {item.image}  alt="projects"></img>
+          <h3>{item.name}</h3>
+          <a target="_blank" className="btn-project" href={item.atag} rel="noreferrer">View</a>
+        </div>
+        )
+      })}
+      
 
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
 
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
-
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
-
-      <div className="item">
-        <img className="portfolio-image" src= {Todo}  alt="todo-app"></img>
-        <h3>Music App</h3>
-      </div>
+  
     </div>
-    
+  
     </div>
   )
 }
