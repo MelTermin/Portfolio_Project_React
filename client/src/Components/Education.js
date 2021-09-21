@@ -15,8 +15,8 @@ function Education() {
             { educationDetails.map((item) => {
           return (//dont forget to return it Melissa!!//
           <li  key= {item.id} >
-          <h3 className="date">{item.date}</h3>
-          <h1 >{item.education_place}</h1>
+          <h5 className="date">{item.date}</h5>
+          <h3 >{item.education_place}</h3>
           <p>{item.details}</p>
           </li>)
         })

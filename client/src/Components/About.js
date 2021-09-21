@@ -1,10 +1,8 @@
 import React, {useEffect, useRef} from 'react'
+import { HiArrowDown} from 'react-icons/hi';
+import { init } from 'ityped'
+import Mel from '../images/Mel_pic.jpeg'
 
-// import Coding from '../images/nature.jpeg'
-// import School from '../images/school.jpeg'
- import { init } from 'ityped'
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
 
 
 
@@ -21,24 +19,34 @@ function About() {
     });
   }, []);
 
+
+
   return (
     <div className="about-container" id="about" >
        
         <div className="wrapper">
-          <br></br>
-          <br></br>
-          <h2>Hi There, I'm</h2>
-          <h1>Melissa Termin</h1>
-          <h3><span ref= {textRef}> </span></h3>
-          <p>
-          I am a newly graduate from Developers Institute's Fullstack Javascript program. I am passionate about building usable and visually captivating website.
-          </p>
-          <p>My journey in Israel started in 2016 when I made aliyah from Istanbul, Turkey.</p>
-          <p>I will love to hear from you whether about a job opportunity or just a chat. Feel free to get in touch with me.</p>
-         <div>
-         <br></br>
-       
-         </div> 
+         
+
+          <div className="about-left">
+        
+            <h2>Hi There, I'm</h2>
+            <h1>Melissa Termin</h1>
+            <h3><span ref= {textRef}> </span></h3>
+             <p>I am a newly graduate from Developers Institute's Fullstack Javascript program. I am passionate about building usable and visually captivating website.</p>
+             <p>My journey in Israel started in 2016 when I made aliyah from Istanbul, Turkey.</p>
+             <p>I will love to hear from you whether about a job opportunity or just a chat. Feel free to get in touch with me.</p>
+      
+             <div className="about-btn-wrapper">
+                <a className="cv" href="https://docs.google.com/document/d/e/2PACX-1vQw1N-3ezzF2zhYvhTtJF8fOdS0vMkMn8gknucs40WR5RKnWfpt7hs_gIZuHkB5l0QsIkZ6Ck4fMrVq/pub" target="_blank">View CV</a>
+
+                <a className="portfolio-btn" href="#portfolio" ><HiArrowDown size= {15}/>  Check out my Portfolio</a>
+
+              </div>
+          </div>
+         
+          <div className="imge-wrapper-right">
+            <img src= {Mel} alt="pic" className="pic"></img>
+          </div>
         
         </div>
     

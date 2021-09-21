@@ -1,12 +1,12 @@
 import React from 'react'
-import Mel from '../images/Mel_pic.jpeg'
+
 
 
 function Navbar() {
   return (
     <div>
       <nav>
-        <img src= {Mel} alt="pic" className="pic"></img>
+       <p className="nav-title">Melissa Termin</p>
         <ul className="menu">
           <li><a href="/#about">About</a></li>
           <li><a href="/#education">Education</a></li>
