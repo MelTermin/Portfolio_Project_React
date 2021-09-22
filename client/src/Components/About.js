@@ -39,7 +39,7 @@ function About() {
              <div className="about-btn-wrapper">
                 <a className="cv" href="https://docs.google.com/document/d/e/2PACX-1vQw1N-3ezzF2zhYvhTtJF8fOdS0vMkMn8gknucs40WR5RKnWfpt7hs_gIZuHkB5l0QsIkZ6Ck4fMrVq/pub" target="_blank">View CV</a>
 
-                <a className="portfolio-btn" href="#portfolio" ><HiArrowDown size= {15}/>  Check out my Portfolio</a>
+                <a className="portfolio-btn" href="#portfolio" ><HiArrowDown size= {15}/> Portfolio</a>
 
               </div>
           </div>
