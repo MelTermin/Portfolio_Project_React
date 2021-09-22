@@ -5,28 +5,35 @@ function Education() {
   return (
     <div className="education-container" id="education">
    
-     <div >
-     
-     <h1 className="education-title">Education</h1>
+        <h1 className="education-title">Education</h1>
   
-     <div class="education-section">
-         <div class="timeline">
-            <ul>
-            { educationDetails.map((item) => {
+          <div class="timeline-section">
+          {
+        educationDetails.map((item) => {
           return (//dont forget to return it Melissa!!//
-          <li  key= {item.id} >
-          <h5 className="date">{item.date}</h5>
-          <h3 >{item.education_place}</h3>
-          <p>{item.details}</p>
-          </li>)
+           
+            <div  key= {item.id}class="timeline-items">
+            <div className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-date">{item.date}</div>
+             <div className="timeline-content">
+               <h3>{item.education_place}</h3>
+               <p>{item.details}</p>
+             </div>
+          </div>
+        </div> )
         })
       }
+       
 
-           </ul>
-         </div>
-     </div>
-   </div> 
-    </div>
+          
+        </div>
+    </div> 
+
+            
+      
+  
+  
   )
 }
 
