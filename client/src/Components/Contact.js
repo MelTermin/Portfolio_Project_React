@@ -62,7 +62,7 @@ function Contact() {
        <input className="input-text" value={email} type="text" name="email" placeholder="Please type your email"  onChange= {(e) => setEmail(e.target.value)}/>
 
       <label>Message:</label>
-       <textarea type="text" value={message} className="field" name="message" type="text"  onChange= {(e) => setMessage(e.target.value)}></textarea>
+       <textarea type="text" value={message} className="field" name="message"   onChange= {(e) => setMessage(e.target.value)}></textarea>
 
        <div>{isSent ? <Result />:null}</div>
         

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Todo from '../images/Book.png'
 import PortfolioList from './PortfolioList'
 import {projectReact,projectJavascript,projectNode} from '../Details'
 

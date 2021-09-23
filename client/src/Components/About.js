@@ -37,7 +37,7 @@ function About() {
              <p>I will love to hear from you whether about a job opportunity or just a chat. Feel free to get in touch with me.</p>
       
              <div className="about-btn-wrapper">
-                <a className="cv" href="https://docs.google.com/document/d/e/2PACX-1vQw1N-3ezzF2zhYvhTtJF8fOdS0vMkMn8gknucs40WR5RKnWfpt7hs_gIZuHkB5l0QsIkZ6Ck4fMrVq/pub" target="_blank">View CV</a>
+                <a className="cv" href="https://docs.google.com/document/d/e/2PACX-1vQw1N-3ezzF2zhYvhTtJF8fOdS0vMkMn8gknucs40WR5RKnWfpt7hs_gIZuHkB5l0QsIkZ6Ck4fMrVq/pub" target="_blank" rel="noreferrer">View CV</a>
 
                 <a className="portfolio-btn" href="#portfolio" ><HiArrowDown size= {15}/> Portfolio</a>
 
